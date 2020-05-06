@@ -45,7 +45,8 @@
     "**/*.dll", // Ignore all .dll files
     "package.json",
     ".eslintrc.js",
-    "package-lock.json"
+    "package-lock.json",
+    ".env"
   ],
 
   // flagWords - list of words to be always considered incorrect
