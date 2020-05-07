@@ -6,6 +6,7 @@ const mongoSessionStore = require("connect-mongo");
 const logger = require("./logs");
 const cors = require("./middleware/cors");
 const database = require("./config/database");
+const api = require("./api");
 
 require("dotenv").config();
 
@@ -53,6 +54,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use(session(sess));
 server.use(cors);
 
+api(server);
 server.get("/", (req, res) => res.send("index"));
 
 server.listen(port, (err) => {
